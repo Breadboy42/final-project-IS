@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #d4e6f1; padding-top: 50px; }
+        .game-box { background: white; padding: 30px; display: inline-block; border-radius: 10px; border: 2px solid #2980b9; }
+        input { padding: 10px; font-size: 16px; }
+        button { padding: 10px 20px; font-size: 16px; background-color: #2980b9; color: white; border: none; cursor: pointer; }
+        #message { margin-top: 20px; font-weight: bold; }
+        a { display: block; margin-top: 20px; color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="game-box">
+        <h1>Guess the Number (1-100)</h1>
+        <p>Enter your guess below:</p>
+        <input type="number" id="userGuess">
+        <button onclick="checkGuess()">Submit</button>
+        <p id="message"></p>
+        <button onclick="location.reload()" style="background-color: #7f8c8d; margin-top:10px;">Restart</button>
+    </div>
+
+    <a href="scratch.html">Back to Scratch Page</a>
+
+    <script>
+        // AI Generated Logic
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            let guess = document.getElementById("userGuess").value;
+            let msg = document.getElementById("message");
+
+            if (guess == randomNumber) {
+                msg.style.color = "green";
+                msg.innerText = "Correct! You won!";
+            } else if (guess > randomNumber) {
+                msg.style.color = "red";
+                msg.innerText = "Too High! Try again.";
+            } else {
+                msg.style.color = "red";
+                msg.innerText = "Too Low! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* Requirement: Custom background color */
+body {
+    background-color: #eef2f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Requirement: Specify font family */
+body {
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Requirement: Specify font color */
+h1, h2 {
+    color: #2a5298;
+}
+
+/* Requirement: 3 Divs for positioning */
+/* Div 1: The Header */
+.header-box {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #2a5298;
+}
+
+/* Div 2: The Main Content (Left side) */
+.main-content {
+    background-color: #ffffff;
+    width: 60%;
+    margin: 20px;
+    padding: 20px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+/* Div 3: The Sidebar (Right side) */
+.sidebar {
+    background-color: #ffffff;
+    width: 30%;
+    margin: 20px;
+    padding: 20px;
+    float: right;
+    border: 1px solid #ccc;
+}
+
+/* Make sure the footer sits below the floating divs */
+.footer {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+}
